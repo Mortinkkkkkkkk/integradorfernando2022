@@ -78,3 +78,4 @@ INSERT INTO bloco (origem_traj, data_coleta, h_coleta, desti_traj, d1,d2, d3, t1
 VALUES ('Bloco D', '2022-05-02', '16:10:00','Bovinocultura', '0.55', '0.58' , '0.57','00:05:57', '00:09:21', '0.05', '0.07', 'P', 'N', 'P', 'N', 'P','N','S', 'S', 'S', 'S','N');
 
 select * from bloco;
+
