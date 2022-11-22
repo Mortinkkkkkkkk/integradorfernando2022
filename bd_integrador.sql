@@ -12,11 +12,11 @@ massa float not null
 );
 
 CREATE TABLE bloco(
-cod_bloco int primary key auto_increment not null,
+id_bloco int primary key auto_increment not null,
 origem_traj varchar(20) not null,
 data_coleta date not null,
 h_coleta time not null,
-desti_traj varchar(20) not null,
+desti_traj varchar(30) not null,
 d1 float(4,2) not null,
 d2 float(4,2) not null,
 d3 float(4,2) not null,
@@ -65,7 +65,22 @@ VALUES ('Bloco D', '2022-04-25', '13:50:00','Mecanização', '0.47', '0.52' , '0
 INSERT INTO bloco (origem_traj, data_coleta, h_coleta, desti_traj, d1,d2, d3, t1, t2, g1, g2, iluminacao, fluxo_pessoas,sombra, degrau, rampa, calcada, placa, pavimento, bebedouro, banheiro,pcd)
 VALUES ('Bloco D', '2022-05-02', '16:10:00','Bovinocultura', '0.55', '0.58' , '0.57','00:05:57', '00:09:21', '0.05', '0.07', 'P', 'N', 'P', 'N', 'P','N','S', 'S', 'S', 'S','N');
 
-select rampa, count(cod_bloco)
+select rampa, count(id_bloco)
 from bloco
 group by rampa;
 
+select degrau, count(id_bloco)
+from bloco
+group by degrau;
+
+select iluminacao, count(id_bloco)
+from bloco
+group by iluminacao;
+
+select banheiro, count(id_bloco)
+from bloco
+group by banheiro;
+
+select pcd, count(id_bloco)
+from bloco
+group by pcd;
